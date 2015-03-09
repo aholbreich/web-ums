@@ -1,2 +1,2 @@
 # web-ums
-Application that provides custom user management service
+Application that provides custom user management service.
