@@ -41,11 +41,18 @@
 		</snapshotRepository>
 	</distributionManagement>
 	
-	 <scm>
+<!--  
+ <scm>
 	 	<url>https://github.com/shuron/web-ums</url>
-	 	<connection>scm:git:git//github.com/shuron/web-ums.git</connection>
-        <developerConnection>scm:git:git@github.com:shuron/web-ums.git</developerConnection>
+	 	<connection>scm:git:https://github.com/shuron/web-ums.git</connection>
+        <developerConnection>scm:git:https://github.com/shuron/web-ums.git</developerConnection>
     </scm>
+    -->
+    <scm>
+    	<url>https://github.com/shuron/web-ums</url>
+    	<connection>scm:git:ssh://git@github.com/shuron/web-ums.git</connection>
+    	<developerConnection>scm:git:ssh://git@github.com/shuron/web-ums.git</developerConnection>
+	</scm>
 	
 	
 	<dependencies>
@@ -54,4 +61,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 	</dependencies>
+	
+	
 </project>
