@@ -1,9 +1,0 @@
-CREATE SCHEMA IF NOT EXISTS "public";
-CREATE SCHEMA IF NOT EXISTS "test";
-
-CREATE TABLE USER (
- id INT NOT NULL,
- login VARCHAR (25),
- password VARCHAR(200),
- PRIMARY KEY(user_id)
-);
