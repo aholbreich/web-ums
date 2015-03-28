@@ -26,6 +26,7 @@ public class UserController {
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<User> create(@RequestBody User user) {
 		long createNewUser = userService.createNewUser(user);
+		// TODO check for dupplicates.
 		user.setId(createNewUser);
 		return new ResponseEntity<User>(user, HttpStatus.CREATED);
 		
