@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Регистрация n2ru</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<div>
+	<div class="modal-body">
+		<div class="control-group">
+			<form action="/register/" method="post" id="thisform"
+				class="form-horizontal navbar-form ">
+
+				<label class="control-label" for="input01">Логин</label>
+				<div class="controls">
+					<input type="text" class="input-large reg_username"
+						name="reg_username"> <br>
+					<span class="reg_usernamecheckitvalue"></span><br>
+				</div>
+				<label class="control-label" for="input01">Email</label>
+				<div class="controls">
+					<input type="text" class="input-large reg_email" id="reg_email"
+						placeholder="" name="reg_email"> <br>
+					<span class="reg_emailcheckitvalue"></span><br>
+				</div>
+				<label class="control-label" for="input01">Пароль</label>
+				<div class="controls">
+					<input type="password" class="input-large" id="reg_password"
+						name="reg_password" placeholder="">
+					<p class="help-block">Минимум 8 символов</p>
+				</div>
+				<label class="control-label" for="input01">Подтверждение
+					пароля</label>
+				<div class="controls">
+					<input type="password" class="input-large" id="reg_verify"
+						name="reg_password2" placeholder="">
+				</div>
+
+			</form>
+		</div>
+		<hr>
+	</div>
+	
+</div>
+</html>
