@@ -1,4 +1,4 @@
-package org.holbreich.web.ums.service;
+package org.holbreich.web.ums.db;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

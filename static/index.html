@@ -1,39 +1,35 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Регистрация n2ru</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<title>Регистрация n2ru</title>
 </head>
 <div>
 	<div class="modal-body">
 		<div class="control-group">
-			<form action="/register/" method="post" id="thisform"
-				class="form-horizontal navbar-form ">
+			<form action="/users" method="post" id="thisform" class="form-horizontal navbar-form ">
 
 				<label class="control-label" for="input01">Логин</label>
 				<div class="controls">
-					<input type="text" class="input-large reg_username"
-						name="reg_username"> <br>
+					<input type="text" class="input-large reg_username" name="login" /> <br>
 					<span class="reg_usernamecheckitvalue"></span><br>
 				</div>
 				<label class="control-label" for="input01">Email</label>
 				<div class="controls">
-					<input type="text" class="input-large reg_email" id="reg_email"
-						placeholder="" name="reg_email"> <br>
+					<input type="text" class="input-large reg_email" id="email" placeholder="" name="email" /> <br>
 					<span class="reg_emailcheckitvalue"></span><br>
 				</div>
 				<label class="control-label" for="input01">Пароль</label>
 				<div class="controls">
 					<input type="password" class="input-large" id="reg_password"
-						name="reg_password" placeholder="">
+						name="password" placeholder="">
 					<p class="help-block">Минимум 8 символов</p>
 				</div>
-				<label class="control-label" for="input01">Подтверждение
-					пароля</label>
+				<label class="control-label" for="input01">Подтверждение пароля</label>
 				<div class="controls">
-					<input type="password" class="input-large" id="reg_verify"
-						name="reg_password2" placeholder="">
+					<input type="password" class="input-large" id="reg_verify" name="password2" placeholder="">
 				</div>
-
+				<input type="submit" name="submit" value="Создать пользователя" class="btn btn-primary" tabindex="16">
 			</form>
 		</div>
 		<hr>
