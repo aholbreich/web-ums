@@ -4,7 +4,8 @@ umsApp.controller('RegistrationCtl', ['$scope', '$http', function($scope, $http)
         
       //Submitt button
       $scope.submit = function() {
-        if ($scope.text) {
+          console.info("Before Sending");
+        if ($scope.fields) {
             var data=$scope.fields; 
             $http.post('users/', data).success(function(data) {
               alert('user created!');

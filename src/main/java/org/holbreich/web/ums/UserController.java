@@ -8,8 +8,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.holbreich.web.ums.db.UserServiceDAO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,14 +33,14 @@ public class UserController {
 		return userService.getUserById(userId);
 	}
 
-//	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-//	public ResponseEntity<User> create(@RequestBody User user) {
-//		long createNewUser = userService.createNewUser(user);
-//		// TODO check for dupplicates.
-//		user.setId(createNewUser);
-//		return new ResponseEntity<User>(user, HttpStatus.CREATED);
-//		
-//	}
+	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<User> create(@RequestBody User user) {
+		long createNewUser = userService.createNewUser(user);
+		// TODO check for dupplicates.
+		user.setId(createNewUser);
+		return new ResponseEntity<User>(user, HttpStatus.CREATED);
+		
+	}
 
 	@RequestMapping(method=RequestMethod.POST, 
 	        consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)

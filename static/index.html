@@ -1,45 +1,52 @@
 <!doctype html>
-<html >
-  <head>
+<html>
+
+<head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="js/controllers.js"></script>
     <title>Регистрация n2ru</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  </head>
+</head>
 
-<div ng-app="ums">
-	<div class="modal-body">
-		<div class="control-group">
-			<form name ="regForm" ng-submit="submit()" ng-controller="RegistrationCtl">
+<body ng-app="ums" ng-controller="RegistrationCtl">
 
-				<label class="control-label" for="login">Логин</label>
-				<div class="controls">
-					<input type="text" ng-model="fields.login" class="input-large reg_username" name="login" /> <br>
-                    <span class="error" ng-show="regForm.login.$error.required">Required!</span><br>
-				</div>
-				<label class="control-label" for="email">Email</label>
-				<div class="controls">
-					<input type="text" ng-model="fields.email" class="input-large reg_email" id="email" placeholder="" name="email" /> <br>
-					<span class="error" ng-show="regForm.email.$error.required">Required!</span><br>
-				</div>
-				<label class="control-label" for="password">Пароль</label>
-				<div class="controls">
-					<input type="password" ng-model="fields.password" class="input-large" id="reg_password"
-						name="password" placeholder="">
-					<p class="help-block">Минимум 8 символов</p>
-                    <span class="error" ng-show="regForm.password.$error.required">Required!</span><br>
-				</div>
-				<label class="control-label" for="password2">Подтверждение пароля</label>
-				<div class="controls">
-					<input type="password"  ng-model="fields.password2" class="input-large" id="reg_verify" name="password2" placeholder="">
-				</div>
-                <span class="error" ng-show="regForm.password2.$error.required">Required!</span><br>
-				<input type="submit" name="submit" value="Создать пользователя" class="btn btn-primary" tabindex="16">
-			</form>
-		</div>
-		<hr>
-	</div>
-	
-</div>
+    <div class="modal-body">
+        <div class="control-group">
+            <form name="regForm" ng-submit="submit()">
+
+                <label class="control-label" for="login">Логин</label>
+                <div class="controls">
+                    <input type="text" ng-model="fields.login" class="input-large reg_username" name="login" required />
+                    <br>
+                    <span class="error" ng-show="regForm.login.$error.required">Required!</span>
+                    <br>
+                </div>
+                <label class="control-label" for="email">Email</label>
+                <div class="controls">
+                    <input type="text" ng-model="fields.email" class="input-large reg_email" id="email" placeholder="" name="email" required />
+                    <br>
+                    <span class="error" ng-show="regForm.email.$error.required">Required!</span>
+                    <br>
+                </div>
+                <label class="control-label" for="password">Пароль</label>
+                <div class="controls">
+                    <input type="password" ng-model="fields.password" class="input-large" id="reg_password" name="password" required />
+                    <p class="help-block">Минимум 8 символов</p>
+                    <span class="error" ng-show="regForm.password.$error.required">Required!</span>
+                    <br>
+                </div>
+                <label class="control-label" for="password2">Подтверждение пароля</label>
+                <div class="controls">
+                    <input type="password" ng-model="fields.password2" class="input-large" id="reg_verify" name="password2" required />
+                </div>
+                <span class="error" ng-show="regForm.password2.$error.required">Required!</span>
+                <br>
+                <input type="submit" name="submit" value="Создать пользователя" class="btn btn-primary" tabindex="16">
+            </form>
+        </div>
+        <hr>
+    </div>
+</body>
+
 </html>
