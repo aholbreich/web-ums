@@ -1,15 +1,21 @@
 package org.holbreich.web.ums;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class User {
 
 	private long id;
 	
+	@JsonProperty("login")
 	private String login;
 	
+	@JsonProperty("password")
 	private String password;
 	
+	@JsonProperty("password2")
 	private String password2;
 	
+	@JsonProperty("email")
 	private String email;
 	
 	public User() {

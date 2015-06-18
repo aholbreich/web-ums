@@ -43,13 +43,9 @@ public class UserController {
 	}
 
 	@RequestMapping(method=RequestMethod.POST, 
-	        consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-	public String createRole(HttpServletRequest request) {
-	    Map<String, String[]> parameterMap = request.getParameterMap();
-	    User user = new User();
-	    user.setEmail(getParam(parameterMap, "email"));
-	    user.setLogin(getParam(parameterMap, "login"));
-	    user.setPassword(getParam(parameterMap, "password"));
+	        consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String createRole(User user) {
+	
 	    long createNewUser = userService.createNewUser(user);
 		// TODO check for dupplicates.
 	    LOG.info("New user registered id "+ createNewUser);
